@@ -1,3 +1,5 @@
+#![no_std]
+
 use std::io::{self, Write};
 
 use embedded_time::rate::Hertz;
