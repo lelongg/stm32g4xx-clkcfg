@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 embedded-time = "0.12.1"
-thiserror = { version = "1.0.30", default-features = false }

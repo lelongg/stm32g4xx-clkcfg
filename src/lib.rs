@@ -498,13 +498,11 @@ impl From<Hertz> for FreqReq {
     }
 }
 
-#[derive(thiserror::Error, Debug)]
+#[derive(Debug)]
 pub enum ClockError {
-    #[error("requirements are outside of hardware capabilities: {0}")]
     BadRequirements(String),
     // TODO: Errors should have priorities, and in our search, we only return the error that has the highest priority
     // (i.e., was found deepest in the clock tree).
-    #[error("requirements cannot be fulfilled: {0}")]
     NoClockFound(String),
     // TODO
 }
